@@ -56,8 +56,8 @@ python manage.py createsuperuser
 Categoría está pensada para separar a los gatos según grupo etario. Se podría agregar la categoría
 gatito, la categoría adulto y la categoría adulto mayor. Se accede a través de http://127.0.0.1:8000/admin/
 
-El botón Gatos que está en la ventana de bienvenida te lleva a crear Gatos. Acá podés anotar los datos del gato del refugio (grupo etario, nombre del gato, carácter en la descipción, edad, sexo y si está disponible para adoptar). También podés eliminar el perfil del gato o editarlo.
+El botón Gatos que está en la ventana de bienvenida te lleva a crear Gatos. Acá podés anotar los datos del gato del refugio (grupo etario, nombre del gato, cómo es el gato en la descipción, edad, sexo y si está disponible para adoptar). También podés eliminar el perfil del gato o editarlo.
 
 Para agregar una solicitud de adopción se ingresa a http://127.0.0.1:8000/admin/. Al añadir una solicitud de
-adopción nueva podrás elegir el nombre del gato del cual se está interesado, el nombre del adoptante, la dirección del mail del adoptante y un mensaje comentando por qué quiere adoptar.
+adopción nueva podrás elegir el nombre del gato del cual se está interesado (si ya se encuntra creado), el nombre del adoptante, la dirección del mail del adoptante y un mensaje comentando por qué quiere adoptar.
 
