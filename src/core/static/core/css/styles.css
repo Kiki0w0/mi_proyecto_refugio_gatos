@@ -1,0 +1,84 @@
+  :root {
+      --django-green: #092e20;
+      --django-light: #44b78b;
+  }
+
+  body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #2b2f33;
+  }
+
+  /* Navbar personalizada */
+  .navbar {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-link {
+      font-weight: 600;
+      color: var(--django-green) !important;
+      transition: color 0.3s;
+  }
+
+  .nav-link:hover {
+      color: var(--django-light) !important;
+  }
+
+  /* Hero Section */
+  .hero {
+      padding: 120px 0 80px;
+      background: radial-gradient(circle at top right, #e8f5e9, #ffffff);
+  }
+
+  .btn-django {
+      background-color: var(--django-green);
+      color: white;
+      border-radius: 8px;
+      padding: 12px 30px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s;
+  }
+
+  .btn-django:hover {
+      background-color: #124d37;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(9, 46, 32, 0.2);
+  }
+
+  /* Cards de Gato */
+  .card-feature {
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      transition: all 0.3s;
+      background: #fff;
+  }
+
+  .card-feature:hover {
+      border-color: var(--django-light);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  }
+
+  .icon-box {
+      width: 60px;
+      height: 60px;
+      background: rgba(68, 183, 139, 0.1);
+      color: var(--django-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+  }
+
+  #about {
+      background-color: #fcfcfc;
+  }
+
+  footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 50px 0;
+  }

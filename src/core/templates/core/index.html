@@ -1,0 +1,68 @@
+﻿{% extends 'core/base.html' %}
+
+{% block contenido %}
+<!-- Hero -->
+<header class="hero">
+    <div class="container text-center">
+        <span class="badge rounded-pill px-3 py-2 mb-3"
+            style="background: rgba(68, 183, 139, 0.1); color: var(--django-light);"></span>
+        <h1 class="display-3 fw-bold mb-4">Gatitos de la Sarmiento<br><span style="color: var(--django-green);">Sociedad
+                Protectora de Animales Sarmiento [desde 1902]</span></h1>
+        <p class="lead text-muted mb-5 mx-auto" style="max-width: 600px;">
+            Rescate, Recuperación, Adopción
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#gato" class="btn btn-django">Mas info</a>
+            <a href="#about" class="btn btn-outline-secondary btn-lg px-4"
+                style="border-radius: 8px; font-size: 1rem; font-weight: 600;">Saber más</a>
+        </div>
+    </div>
+</header>
+
+<!-- Sección Gato -->
+<section id="gato" class="py-5">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-feature p-4 h-100">
+                    <div class="icon-box">⚡</div>
+                    <h5 class="fw-bold">Donaciones</h5>
+                    <p class="text-muted">Aceptamos transferencias bancarias, balanceado seco y húmedo, mantas y más
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-feature p-4 h-100">
+                    <div class="icon-box">🛡️</div>
+                    <h5 class="fw-bold">Vení a voluntariar</h5>
+                    <p class="text-muted">Si te interesa hacer voluntariado en nuestro refugio podés llenar el
+                        formulario</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-feature p-4 h-100">
+                    <div class="icon-box">🚀</div>
+                    <h5 class="fw-bold">Adopciones</h5>
+                    <p class="text-muted">Solo adopciones en C.A.B.A.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección About -->
+<section id="about" class="py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="display-5 fw-bold mb-4">Desde 1902</h2>
+                <p class="fs-5 text-muted">
+                    Estamos en Capital Federal, a 10 cuadras del Obelisco.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock contenido %}
