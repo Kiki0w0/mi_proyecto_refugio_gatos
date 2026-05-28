@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        {% if form.instance.pk %}
+        <h1 class="mb-0">Categoría: Editar</h1>
+        {% else %}
+        <h1 class="mb-0">Categoría: Crear</h1>
+        {% endif %}
+        <a class="btn btn-secondary" href="{% url 'gato:categoria_home' %}">Volver</a>
+    </div>
+
+    <form method="post" class="card p-4 shadow-sm">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+        </div>
+        {% endif %}
+        <div class="table-responsive">
+            <table class="table table-borderless mb-4">
+                <tbody>
+                    {% for field in form %}
+                    <tr>
+                        <th class="align-middle" style="width: 25%;">{{ field.label_tag }}</th>
+                        <td>
+                            {{ field.errors }}
+                            {{ field }}
+                            {% if field.help_text %}
+                            <div class="form-text">{{ field.help_text }}</div>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+{% endblock contenido %}

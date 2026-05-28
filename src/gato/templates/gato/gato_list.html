@@ -3,16 +3,16 @@
 {% block contenido %}
 <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1 class="mb-0">Categorías</h1>
+        <h1 class="mb-0">Gatos</h1>
         <div>
-            <a class="btn btn-success me-2" href="{% url 'gato:categoria_create' %}">Crear</a>
+            <a class="btn btn-success me-2" href="{% url 'gato:gato_create' %}">Crear</a>
             <a class="btn btn-secondary" href="{% url 'core:home' %}">Inicio</a>
         </div>
     </div>
 
     <form method="get" class="row g-2 mb-4">
         <div class="col-auto flex-grow-1">
-            <input type="text" name="consulta" class="form-control" placeholder="Buscar...">
+            <input type="text" name="consulta" class="form-control" placeholder="Buscar gato...">
         </div>
         <div class="col-auto">
             <button type="submit" class="btn btn-primary">Buscar</button>
@@ -25,26 +25,30 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
+                    <th>Sexo</th>
+                    <th>Edad</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                {% for categoria in object_list %}
+                {% for gato in object_list %}
                 <tr>
-                    <td>{{ categoria.id }}</td>
-                    <td>{{ categoria.nombre }}</td>
+                    <td>{{ gato.id }}</td>
+                    <td>{{ gato.nombre }}</td>
+                    <td>{{ gato.sexo }}</td>
+                    <td>{{ gato.edad }}</td>
                     <td>
                         <a class="btn btn-sm btn-outline-primary me-1"
-                            href="{% url 'gato:categoria_detail' categoria.id %}">Detalle</a>
+                            href="{% url 'gato:gato_detail' gato.id %}">Detalle</a>
                         <a class="btn btn-sm btn-outline-warning me-1"
-                            href="{% url 'gato:categoria_update' categoria.id %}">Editar</a>
+                            href="{% url 'gato:gato_update' gato.id %}">Editar</a>
                         <a class="btn btn-sm btn-outline-danger"
-                            href="{% url 'gato:categoria_delete' categoria.id %}">Eliminar</a>
+                            href="{% url 'gato:gato_delete' gato.id %}">Eliminar</a>
                     </td>
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="3" class="text-center">No hay categorías registradas.</td>
+                    <td colspan="5" class="text-center">No hay gatos registrados.</td>
                 </tr>
                 {% endfor %}
             </tbody>
