@@ -19,7 +19,7 @@ Las solicitudes de adopción pueden ser administradas desde el panel correspondi
 - Búsqueda de gatos
 - Página de inicio y navegación
 
-El proyecto fué realizado con lenguaje Python (versión 3.14.5) y framework Django (versión 6.0.5). Lo visual fué realizado con bootstrap 5.
+El proyecto fué realizado con lenguaje Python (versión 3.14.5) y framework Django (versión 6.0.5). Lo visual fué realizado con bootstrap 5. Usé Render para crear la url pública.
 
 ## Instalación:
 
