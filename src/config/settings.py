@@ -119,3 +119,4 @@ USE_TZ = True
 STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL = "core:home"
 LOGIN_URL = "core:login"
+STATIC_ROOT = BASE_DIR / "staticfiles"
