@@ -58,3 +58,6 @@ El botón Gatos que está en la ventana de bienvenida te lleva a crear Gatos. Ac
 
 Para agregar una solicitud de adopción se ingresa a http://127.0.0.1:8000/admin/. Al añadir una solicitud de
 adopción nueva podrás elegir el nombre del gato del cual se está interesado (si ya se encuntra creado), el nombre del adoptante, la dirección del mail del adoptante y un mensaje comentando por qué quiere adoptar.
+
+## URL pública:
+https://mi-proyecto-refugio-gatos.onrender.com/
