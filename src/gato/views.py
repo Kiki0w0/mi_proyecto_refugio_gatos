@@ -8,6 +8,7 @@ from django.views.generic import (
 )
 from gato.models import Categoria, Gato, SolicitudAdopcion
 from gato.forms import CategoriaForm, GatoForm, SolicitudAdopcionForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class CategoriaList(ListView):
@@ -25,12 +26,12 @@ class CategoriaList(ListView):
         return queryset
 
 
-class CategoriaCreate(CreateView):
+class CategoriaCreate(LoginRequiredMixin, CreateView):
     model = Categoria
     form_class = CategoriaForm
     success_url = reverse_lazy("gato:categoria_home")
 
-class CategoriaUpdate(UpdateView):  
+class CategoriaUpdate(LoginRequiredMixin, UpdateView):  
     model = Categoria
     form_class = CategoriaForm
     success_url = reverse_lazy("gato:categoria_home")
@@ -41,7 +42,7 @@ class CategoriaDetail(DetailView):
     model = Categoria
 
 
-class CategoriaDelete(DeleteView):
+class CategoriaDelete(LoginRequiredMixin, DeleteView):
     model = Categoria
     success_url = reverse_lazy("gato:categoria_home")
 
@@ -58,13 +59,13 @@ class GatoList(ListView):
         return queryset
 
 
-class GatoCreate(CreateView):
+class GatoCreate(LoginRequiredMixin,CreateView):
     model = Gato
     form_class = GatoForm
     success_url = reverse_lazy("gato:gato_home")
 
 
-class GatoUpdate(UpdateView):
+class GatoUpdate(LoginRequiredMixin, UpdateView):
     model = Gato
     form_class = GatoForm
     success_url = reverse_lazy("gato:gato_home")
@@ -74,7 +75,7 @@ class GatoDetail(DetailView):
     model = Gato
 
 
-class GatoDelete(DeleteView):
+class GatoDelete(LoginRequiredMixin, DeleteView):
     model = Gato
     success_url = reverse_lazy("gato:gato_home")
 
@@ -90,13 +91,13 @@ class SolicitudAdopcionList(ListView):
         return queryset
 
 
-class SolicitudAdopcionCreate(CreateView):
+class SolicitudAdopcionCreate(LoginRequiredMixin, CreateView):
     model = SolicitudAdopcion
     form_class = SolicitudAdopcionForm
     success_url = reverse_lazy("gato:solicitud_home")
 
 
-class SolicitudAdopcionUpdate(UpdateView):
+class SolicitudAdopcionUpdate(LoginRequiredMixin, UpdateView):
     model = SolicitudAdopcion
     form_class = SolicitudAdopcionForm
     success_url = reverse_lazy("gato:solicitud_home")
@@ -106,6 +107,6 @@ class SolicitudAdopcionDetail(DetailView):
     model = SolicitudAdopcion
 
 
-class SolicitudAdopcionDelete(DeleteView):
+class SolicitudAdopcionDelete(LoginRequiredMixin,DeleteView):
     model = SolicitudAdopcion
     success_url = reverse_lazy("gato:solicitud_home")
