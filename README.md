@@ -77,3 +77,9 @@ adopción nueva podrás elegir el nombre del gato del cual se está interesado (
 
 ### Página de solicitudes de adopción 
 ![Solicitud_de_adopcion](capturas/solicitud_de_adopcion.png)
+
+
+
+## Seguridad
+
+Las vistas de creación, edición y eliminación se encuentran protegidas mediante autenticación de usuarios utilizando LoginRequiredMixin.
