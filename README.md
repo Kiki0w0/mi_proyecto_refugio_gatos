@@ -24,22 +24,32 @@ El proyecto fué realizado con lenguaje Python (versión 3.14.5) y framework Dja
 
 ## Instalación:
 
-Clonación del repositorio:
-git clone URL_DEL_REPOSITORIO
+### Clonación del repositorio:
+git clone https://github.com/Kiki0w0/mi_proyecto_refugio_gatos
+cd mi_proyecto_refugio_gatos
 
-Creación del entorno virtual:
+### Creación del entorno virtual:
 python -m venv .venv
 
-Activación del entorno virtual:
+### Activación del entorno virtual en Windows:
 .venv\Scripts\activate
 
-Instalación de dependencias:
-pip install django
+### Instalación de dependencias:
+pip install -r requirements.txt
 
-Aplicación de migraciones:
+### Crear archivo .env
+Crear un archivo `.env` en la raíz del proyecto con:
+
+SECRET_KEY=django-insecure-ajxn@cvu1axzx4tu!y9vqr+@4!0ah^_k&$8427hpf^vx6b-=kb
+DEBUG=True
+
+### 6. Ingresar a la carpeta src
+cd src
+
+### Aplicación de migraciones:
 python manage.py migrate
 
-Ejecución del servidor:
+### Ejecución del servidor:
 python manage.py runserver
 
 
