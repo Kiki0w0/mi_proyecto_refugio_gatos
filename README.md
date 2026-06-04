@@ -63,8 +63,17 @@ adopción nueva podrás elegir el nombre del gato del cual se está interesado (
 
 ## Capturas de pantalla
 
+### Página pricipal
 ![Inicio](capturas/inicio.png)
+
+### Página del login
 ![Inicio](capturas/login.png)
+
+### Página categorías
 ![Categorias](capturas/categorias)
+
+### Página gatos
 ![Gatos](capturas/gatos.png)
+
+### Página de solicitudes de adopción 
 ![Solicitud_de_adopcion](capturas/solicitud_de_adopcion.png)
